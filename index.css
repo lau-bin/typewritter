@@ -1,0 +1,163 @@
+@font-face {
+  font-family: custom-font;
+  src: url('./font/L.C. Smith 5 typewriter.ttf');
+}
+body {
+  background: #dddddd;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: flat;
+}
+*{
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  user-select: none;
+}
+
+.container{
+  /* transform: perspective(1000px) rotateX(22deg); */
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+canvas{
+  position: absolute;
+  background-color:  transparent;
+  left: 50%;
+  top: 33px;
+  z-index: 0;
+}
+.page{
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  left: 50%;
+  top: 33px;
+}
+.pageSegment{
+  position: absolute;
+  margin-right: -2px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+  z-index: 2;
+}
+
+.flip0{
+  animation: 6s ease-out 0s 1 normal forwards running flip0, 3s linear 2.5s 1 normal forwards running removeImage;
+}
+
+.flip1{
+  animation: 3s ease-out 0s 2 alternate forwards running flip1, 3s linear 2.5s 1 normal forwards running removeImage; 
+}
+.flip2{
+  animation: 3s ease-out 0s 2 alternate forwards running flip2, 3s linear 2.5s 1 normal forwards running removeImage;
+}
+.flip3{
+  animation: 3s ease-out 0s 2 alternate forwards running flip3, 3s linear 3.2s 1 normal forwards running removeImage;
+}
+.flip4{
+  animation: 3s ease-out 0s 2 alternate forwards running flip4, 3s linear 3.5s 1 normal forwards running removeImage;
+}
+.flip5{
+  animation: 3s ease-out 0s 2 alternate forwards running flip5, 3s linear 3.5s 1 normal forwards running removeImage;
+}
+.flip6{
+  animation: 3s ease-out 0s 2 alternate forwards running flip6, 3s linear 3.8s 1 normal forwards running removeImage;
+}
+.flip7{
+  animation: 3s ease-out 0s 2 alternate forwards running flip7, 3s linear 4s 1 normal forwards running removeImage;
+}
+.flip8{
+  animation: 3s ease-out 0s 2 alternate forwards running flip8, 3s linear 4s 1 normal forwards running removeImage;
+}
+@keyframes removeImage{
+  from {
+    background-image: url("./book-half.png");
+  }
+  to{
+    background-image: url("./book-half.png");
+  }
+}
+
+@keyframes flip0{
+  from {
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(-180deg);
+  }
+}
+
+@keyframes flip1{
+  from {
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(11deg);
+  }
+}
+@keyframes flip2{
+  from {
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(11deg);
+  }
+}
+@keyframes flip3{
+  from {
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(11deg);
+  }
+}
+@keyframes flip4{
+  from {
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(11deg);
+  }
+}
+@keyframes flip5{
+  from {
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(11deg);
+  }
+}
+@keyframes flip6{
+  from {
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(11deg);
+  }
+}
+@keyframes flip7{
+  from {
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(11deg);
+  }
+}
+@keyframes flip8{
+  from {
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(11deg);
+  }
+}
+
+
+
